@@ -11,6 +11,7 @@ License:	LGPL
 Group:		System/Libraries
 URL:		http://clanlib.org/hermes/
 Source0:	http://dark.x.dtu.dk/~mbn/clanlib/download/Hermes-%{version}.tar.bz2
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 HERMES is a library designed to convert a source buffer with a specified pixel
