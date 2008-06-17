@@ -6,7 +6,7 @@
 Summary:	Hermes pixel format conversion library
 Name:		hermes
 Version:	1.3.3
-Release:	%mkrel 5
+Release:	%mkrel 6
 License:	LGPL
 Group:		System/Libraries
 URL:		http://clanlib.org/hermes/
