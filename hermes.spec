@@ -6,7 +6,7 @@
 Summary:	Hermes pixel format conversion library
 Name:		hermes
 Version:	1.3.3
-Release:	%mkrel 10
+Release:	%mkrel 12
 License:	LGPL
 Group:		System/Libraries
 URL:		http://clanlib.org/hermes/
@@ -66,12 +66,12 @@ applications which will use %{name}.
 make
 
 %install
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %makeinstall
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %files -n %{lib_name}
 %defattr(-, root, root, 0755)
@@ -85,4 +85,51 @@ rm -rf %{buildroot}
 %{_libdir}/lib*.so
 %{_libdir}/*.*a
 
+
+
+
+%changelog
+* Wed May 04 2011 Oden Eriksson <oeriksson@mandriva.com> 1.3.3-10mdv2011.0
++ Revision: 665409
+- mass rebuild
+
+* Fri Dec 03 2010 Oden Eriksson <oeriksson@mandriva.com> 1.3.3-9mdv2011.0
++ Revision: 605854
+- rebuild
+
+* Wed Mar 17 2010 Oden Eriksson <oeriksson@mandriva.com> 1.3.3-8mdv2010.1
++ Revision: 522846
+- rebuilt for 2010.1
+
+* Wed Sep 02 2009 Christophe Fergeau <cfergeau@mandriva.com> 1.3.3-7mdv2010.0
++ Revision: 425142
+- rebuild
+
+* Tue Jun 17 2008 Thierry Vignaud <tv@mandriva.org> 1.3.3-6mdv2009.0
++ Revision: 221127
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Mon Dec 17 2007 Thierry Vignaud <tv@mandriva.org> 1.3.3-5mdv2008.1
++ Revision: 126656
+- kill re-definition of %%buildroot on Pixel's request
+
+
+* Mon Mar 19 2007 Oden Eriksson <oeriksson@mandriva.com> 1.3.3-5mdv2007.1
++ Revision: 146693
+- disable inline asm code by using "--disable-x86asm", it does not build otherwise
+
+* Sun Mar 18 2007 Oden Eriksson <oeriksson@mandriva.com> 1.3.3-4mdv2007.1
++ Revision: 146024
+- bump release
+- added a gcc4 patch by pld (P0)
+- Import hermes
+
+* Wed Feb 21 2007 Oden Eriksson <oeriksson@mandriva.com> 1.3.3-3mdv2007.1
+- use the mkrel macro
 
