@@ -9,8 +9,7 @@ Release:	13
 License:	LGPLv2
 Group:		System/Libraries
 Url:		ftp://ftp.scene.org/pub/resources/code/libs/hermes/download.html
-Source0:	http://dark.x.dtu.dk/~mbn/clanlib/download/
-Hermes-%{version}.tar.bz2
+Source0:	http://dark.x.dtu.dk/~mbn/clanlib/download/Hermes-%{version}.tar.bz2
 
 %description
 HERMES is a library designed to convert a source buffer with a specified pixel
@@ -60,10 +59,10 @@ make
 %makeinstall
 
 %files -n %{libname}
-%doc AUTHORS COPYING INSTALL.DOS INSTALL.unix TODO TODO.conversion 
-%{_libdir}/lib*.so.%{major}*
+%{_libdir}/libHermes.so.%{major}*
 
 %files -n %{devname}
+%doc AUTHORS COPYING INSTALL.DOS INSTALL.unix TODO TODO.conversion 
 %doc docs/api/*.htm
 %{_includedir}/*
 %{_libdir}/lib*.so
