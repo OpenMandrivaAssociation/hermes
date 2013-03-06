@@ -1,6 +1,6 @@
 %define major	1
 %define libname %mklibname %{name} %{major}
-%define devname %mklibname %{name} %{major}
+%define devname %mklibname %{name} -d
 
 Summary:	Hermes pixel format conversion library
 Name:		hermes
