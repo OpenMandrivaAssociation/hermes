@@ -52,6 +52,9 @@ applications which will use %{name}.
 # FIXME: gold linker dies with internal error in convert_types, at ../../gold/gold.h:192 on i586
 %ifarch %{ix86}
 export CC="%{__cc} -fuse-ld=bfd"
+mkdir -p BFD
+ln -sf /usr/bin/ld.bfd BFD/ld
+export PATH=$PWD/BFD:$PATH
 %endif
 %configure2_5x \
 	--disable-static \
