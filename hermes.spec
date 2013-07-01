@@ -2,7 +2,7 @@
 %define libname %mklibname %{name} %{major}
 %define devname %mklibname %{name} -d
 
-Summary:	Hermes pixel format conversion library
+Summary:	Pixel format conversion library
 Name:		hermes
 Version:	1.3.3
 Release:	13
