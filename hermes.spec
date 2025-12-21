@@ -13,6 +13,11 @@ Group:		System/Libraries
 Url:		ftp://ftp.scene.org/pub/resources/code/libs/hermes/download.html
 Source0:	http://dark.x.dtu.dk/~mbn/clanlib/download/Hermes-%{version}.tar.bz2
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 HERMES is a library designed to convert a source buffer with a specified pixel
 format to a destination buffer with possibly a different format at the maximum
